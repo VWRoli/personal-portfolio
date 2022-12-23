@@ -9,5 +9,3 @@
 <main>
 	<HeroSection />
 </main>
-
-<style src="./css/index.min.css"></style>
