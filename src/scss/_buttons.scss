@@ -1,0 +1,21 @@
+.resume-btn {
+  @include button($light-secondary-color);
+}
+.nav-toggle {
+  @include button($light-secondary-color);
+  background: transparent;
+  border: none;
+}
+.live-btn {
+  @include button-lighten($dark-primary-color);
+}
+.code-btn {
+  @include button-lighten($dark-primary-color);
+  margin-left: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .code-btn,
+  .live-btn {
+    font-size: 0.7rem;
+  }
+}

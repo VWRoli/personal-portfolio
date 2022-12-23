@@ -1,0 +1,88 @@
+#experience {
+  background: $bg-gradient;
+  color: $dark-primary-color;
+  @include flex-center(row);
+
+  div {
+    margin: 1rem;
+  }
+  .experience-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 780px;
+  }
+
+  a {
+    color: lighten($dark-primary-color, 20%);
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    &::after {
+      @include drawline(margin-left);
+    }
+  }
+  h3 {
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  .company-title {
+    margin-right: 1rem;
+    h3 {
+      a {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+  }
+  p {
+    @include tag-color(#fff, $dark-primary-color);
+  }
+  ul {
+    padding-left: 2rem;
+    list-style: none;
+    text-indent: -1rem;
+    li {
+      line-height: 1.75;
+      span {
+        text-indent: 0;
+      }
+    }
+    li:before {
+      content: '+';
+      padding-right: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #experience {
+    .experience-content-wrapper {
+      .company-title {
+        margin: 0;
+      }
+      div {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+    }
+    h2 {
+      &::after {
+        width: 200px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  #experience {
+    h2 {
+      &::after {
+        width: 150px;
+      }
+    }
+  }
+}

@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import HeroSection from '../components/HeroSection.svelte';
+</script>
+
+<svelte:head>
+	<link rel="stylesheet" href="./src/css/index.min.css" />
+</svelte:head>
+
+<main>
+	<HeroSection />
+</main>
+
+<style src="./css/index.min.css"></style>

@@ -1,0 +1,97 @@
+.tag {
+  padding: 2px 6px;
+  margin: 5px 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.9;
+  cursor: default;
+}
+.html-tag {
+  @include tag-color(#fff, #f06529);
+}
+.css-tag {
+  @include tag-color(#fff, #2965f1);
+}
+.javascript-tag {
+  @include tag-color(#222, #f0db4f);
+  border: 1px solid #222;
+}
+.react-tag {
+  @include tag-color(#61dafb, #282c34);
+  border: 1px solid #61dafb;
+}
+.api-tag {
+  @include tag-color(#fff, #45c541);
+  border: 1px solid #fff;
+}
+.bootstrap-tag {
+  @include tag-color(#fff, #7952b3);
+}
+.github-tag {
+  @include tag-color(#fff, #24292e);
+  border: 1px solid #fff;
+}
+.seo-tag {
+  @include tag-color(#fff, #317bb4);
+  border: 1px solid #fff;
+}
+
+.npm-tag {
+  @include tag-color(#fff, #c12127);
+  border: 1px solid #fff;
+}
+.parcel-tag {
+  @include tag-color(#fff, #21374b);
+}
+.sass-tag {
+  @include tag-color(#fff, #bf4080);
+  border: 1px solid #fff;
+}
+.redux-tag {
+  @include tag-color(#774bbc, #fff);
+  border: 1px solid #774bbc;
+}
+.mongodb-tag {
+  @include tag-color(#44aa52, #fff);
+  border: 1px solid #44aa52;
+}
+.nodejs-tag {
+  @include tag-color(#fff, #488c46);
+}
+.expressjs-tag {
+  @include tag-color(#4f9dff, #fff);
+  border: 1px solid #4f9dff;
+}
+.jira-tag {
+  @include tag-color(#3253cc, #fff);
+  border: 1px solid #3253cc;
+}
+.postman-tag {
+  @include tag-color(#ee6a38, #fff);
+  border: 1px solid #ee6a38;
+}
+.typescript-tag {
+  @include tag-color(#3178c6, #fff);
+  border: 1px solid #3178c6;
+}
+.material-ui-tag {
+  @include tag-color(#fff, #0074e9);
+}
+.figma-tag {
+  @include tag-color(#2c2c2c, #c7b9ff);
+  border: 1px solid #2c2c2c;
+}
+.nextjs-tag {
+  @include tag-color(#000, #fff);
+  border: 1px solid #000;
+}
+.tailwindcss-tag {
+  @include tag-color(#0f172a, #f8fafc);
+  border: 1px solid #0f172a;
+}
+.react-native-tag {
+  @include tag-color(#61dafb, #282c34);
+  border: 1px solid #61dafb;
+}

@@ -1,0 +1,95 @@
+$dark-primary-color: #45596e;
+$light-primary-color: #b2ccde;
+$dark-secondary-color: #4e4231;
+$light-secondary-color: #e4cdaa;
+$hover-color: #ba9350;
+
+$bg-gradient: linear-gradient(217deg, #b2ccde, rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, #e4cdaa, rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(198deg, #d1a86b, rgba(0, 0, 255, 0) 70.71%),
+  linear-gradient(336deg, #45596e, rgba(0, 0, 255, 0) 70.71%);
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button($color) {
+  border: 3px solid $color;
+  padding: 0.35rem 0.65rem;
+  border-radius: 5px;
+  color: $color;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    border-color: darken($color, 30%);
+    color: darken($color, 30%);
+  }
+}
+@mixin button-lighten($color) {
+  border: 3px solid $color;
+  padding: 0.35rem 0.65rem;
+  border-radius: 5px;
+  color: $color;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    border-color: lighten($color, 30%);
+    color: lighten($color, 30%);
+  }
+}
+
+@mixin glass() {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+@mixin link-color($color) {
+  text-align: center;
+  color: $color;
+  &:hover {
+    color: lighten($color, 30%);
+  }
+}
+
+@mixin tag-color($color, $bg-color) {
+  color: $color;
+  background: linear-gradient(
+    to bottom right,
+    $bg-color 0%,
+    $bg-color 35%,
+    lighten($bg-color, 20%) 50%,
+    $bg-color 65%,
+    $bg-color 100%
+  );
+  &:hover {
+    background: linear-gradient(
+      to bottom right,
+      $bg-color 0%,
+      $bg-color 35%,
+      $bg-color 50%,
+      lighten($bg-color, 20%) 65%,
+      $bg-color 100%
+    );
+  }
+}
+
+@mixin drawline($margin-direction) {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 1px;
+  background-color: $dark-primary-color;
+  #{$margin-direction}: 1rem;
+}
