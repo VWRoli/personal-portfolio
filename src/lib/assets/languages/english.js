@@ -3,22 +3,22 @@ export const english = {
 	links: [
 		{
 			id: 1,
-			url: 'hero',
+			url: '#hero',
 			text: 'Home'
 		},
 		{
 			id: 2,
-			url: 'projects',
+			url: '#projects',
 			text: 'Projects'
 		},
 		{
 			id: 3,
-			url: 'experience',
+			url: '#experience',
 			text: 'Experience'
 		},
 		{
 			id: 4,
-			url: 'about',
+			url: '#about',
 			text: 'About'
 		}
 	],

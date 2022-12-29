@@ -15,6 +15,14 @@
 	function toggle() {
 		isOpen = !isOpen;
 	}
+
+	function scrollIntoView({ target }: { target: any }) {
+		const el = document.querySelector(target.getAttribute('href'));
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 </script>
 
 <nav>
@@ -38,7 +46,7 @@
 	<ul class={isOpen ? `links` : `links show-container`}>
 		{#each $language.links as link (link.id)}
 			<li>
-				<a class="link-items" href={link.url}>
+				<a class="link-items" href={link.url} on:click|preventDefault={scrollIntoView}>
 					{link.text}
 				</a>
 			</li>
