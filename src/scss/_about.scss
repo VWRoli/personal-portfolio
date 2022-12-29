@@ -1,4 +1,5 @@
 #about {
+  scroll-margin: 76px;
 	@include flex-center(row);
 	background-color: #eee;
 	color: $dark-secondary-color;

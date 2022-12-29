@@ -20,6 +20,7 @@
 		const el = document.querySelector(target.getAttribute('href'));
 		if (!el) return;
 		el.scrollIntoView({
+			top: -76,
 			behavior: 'smooth'
 		});
 	}
