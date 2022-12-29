@@ -1,35 +1,37 @@
 #hero {
-  background: $bg-gradient;
-  @include flex-center(row);
+	background: $bg-gradient;
+	@include flex-center(row);
 
-  .intro {
-    display: grid;
-    place-content: center;
-    position: relative;
-    color: $dark-secondary-color;
-    padding: 2rem;
-    margin: 1rem;
+	.intro {
+		display: grid;
+		place-content: center;
+		position: relative;
+		color: $dark-secondary-color;
+		padding: 2rem;
+		margin: 1rem;
 
-    h1 {
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-    p {
-      color: $dark-primary-color;
-      line-height: 1.5;
-    }
-    .links {
-      text-align: center;
-      margin: 1.5rem;
-      & > * {
-        margin: 1rem;
-      }
-    }
-    a {
-      @include link-color($dark-secondary-color);
-    }
-    & > * {
-      z-index: 2;
-    }
-  }
+		h1 {
+			font-weight: 400;
+			margin-bottom: 1.5rem;
+		}
+		p {
+			color: $dark-primary-color;
+			line-height: 1.5;
+		}
+		.links {
+			text-align: center;
+			margin: 1.5rem;
+			display: flex;
+			justify-content: center;
+			& > * {
+				margin: 1rem;
+			}
+		}
+		a {
+			@include link-color($dark-secondary-color);
+		}
+		& > * {
+			z-index: 2;
+		}
+	}
 }
