@@ -1,51 +1,55 @@
 #about {
-  @include flex-center(row);
-  background-color: #eee;
-  color: $dark-secondary-color;
+	@include flex-center(row);
+	background-color: #eee;
+	color: $dark-secondary-color;
 
-  h2,
-  h3 {
-    font-weight: 500;
-    margin: 0.5rem;
-  }
-  h3 {
-    font-size: 0.8rem;
-  }
-  p,
-  b {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: $dark-primary-color;
-  }
+	h2,
+	h3 {
+		font-weight: 500;
+		margin: 0.5rem;
+	}
+	h3 {
+		font-size: 0.8rem;
+	}
+	p,
+	b {
+		font-size: 0.85rem;
+		line-height: 1.5;
+		color: $dark-primary-color;
+	}
 
-  .left-container,
-  .right-container {
-    flex: 1;
-    position: relative;
-    padding: 2rem;
-    @include flex-center(column);
-    text-align: center;
-    max-width: 25rem;
-    margin: 2rem;
-    & > * {
-      margin: 0.5rem;
-      z-index: 2;
-    }
-  }
-  .code-group a {
-    margin: 1rem;
-  }
+	.left-container,
+	.right-container {
+		flex: 1;
+		position: relative;
+		padding: 2rem;
+		@include flex-center(column);
+		text-align: center;
+		max-width: 25rem;
+		margin: 2rem;
+		& > * {
+			margin: 0.5rem;
+			z-index: 2;
+		}
+	}
+	.code-group {
+		display: flex;
+		align-items: center;
+	}
+	.code-group a {
+		margin: 1rem;
+	}
 
-  a {
-    @include link-color($dark-primary-color);
-  }
+	a {
+		@include link-color($dark-primary-color);
+	}
 }
 @media screen and (max-width: 960px) {
-  #about {
-    @include flex-center(column);
-    .left-container {
-      margin: 1rem;
-      padding: 1rem;
-    }
-  }
+	#about {
+		@include flex-center(column);
+		.left-container {
+			margin: 1rem;
+			padding: 1rem;
+		}
+	}
 }

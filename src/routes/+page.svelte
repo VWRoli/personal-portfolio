@@ -3,6 +3,7 @@
 	import HeroSection from '../components/HeroSection.svelte';
 	import Projects from '../components/Projects.svelte';
 	import Experience from '../components/Experience.svelte';
+	import About from '../components/About.svelte';
 </script>
 
 <svelte:head>
@@ -14,4 +15,5 @@
 	<HeroSection />
 	<Projects />
 	<Experience />
+	<About />
 </main>
