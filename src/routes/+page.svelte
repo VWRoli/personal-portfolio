@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Navbar from '../components/Navbar.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
 </script>
 
@@ -7,5 +8,6 @@
 </svelte:head>
 
 <main>
+	<Navbar />
 	<HeroSection />
 </main>
