@@ -34,7 +34,7 @@ export const english = {
 		{
 			id: 1,
 			title: 'Guitar Practice Assistant',
-			img: './images/practice-assistant.png',
+			img: '/img/practice-assistant.png',
 			tags: ['Typescript', 'React', 'Sass', 'Redux', 'MongoDB', 'NodeJs', 'ExpressJS', 'API'],
 			codeUrl: 'https://github.com/VWRoli/guitar-practice-assistant',
 			liveUrl: 'https://guitar-pa.netlify.app',
