@@ -2,6 +2,7 @@
 	import Navbar from '../components/Navbar.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
 	import Projects from '../components/Projects.svelte';
+	import Experience from '../components/Experience.svelte';
 </script>
 
 <svelte:head>
@@ -12,4 +13,5 @@
 	<Navbar />
 	<HeroSection />
 	<Projects />
+	<Experience />
 </main>
