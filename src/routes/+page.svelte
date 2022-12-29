@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '../components/Navbar.svelte';
 	import HeroSection from '../components/HeroSection.svelte';
+	import Projects from '../components/Projects.svelte';
 </script>
 
 <svelte:head>
@@ -10,4 +11,5 @@
 <main>
 	<Navbar />
 	<HeroSection />
+	<Projects />
 </main>

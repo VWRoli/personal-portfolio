@@ -1,175 +1,177 @@
 #projects {
-  background-color: #eee;
-  padding: 1rem 0;
-  .title {
-    font-size: 2rem;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  .project {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 0.5rem;
-    position: relative;
-    margin: 5rem 2rem;
-    .blur {
-      display: none;
-    }
+	background-color: #eee;
+	padding: 1rem 0;
+	.title {
+		font-size: 2rem;
+		font-weight: 400;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	.project {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 0.5rem;
+		position: relative;
+		margin: 5rem 2rem;
+		.blur {
+			display: none;
+		}
 
-    .project-content {
-      position: relative;
-      grid-area: 1 / 1 / -1 / 7;
+		.project-content {
+			position: relative;
+			grid-area: 1 / 1 / -1 / 7;
 
-      h2 {
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        &::after {
-          @include drawline(margin-left);
-        }
-      }
-    }
-    .project-image {
-      position: relative;
-      z-index: 1;
-      grid-area: 1 / 6 / -1 / -1;
-      padding: 0 1rem;
-      background-color: #eee;
-      display: flex;
-      align-items: center;
-    }
-    .project-card {
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      position: relative;
-      z-index: 2;
-      margin: 1rem 0;
-      .blur {
-        display: block;
-      }
-      p {
-        margin: 2rem;
-        position: relative;
-        z-index: 10;
-      }
-    }
-    .tag-wrapper {
-      position: relative;
-      z-index: 2;
-    }
-    .button-wrapper {
-      margin-top: 1rem;
-      a {
-        margin: 0.5rem;
-        @include link-color($dark-secondary-color);
-      }
-    }
-  }
-  .project.reverse {
-    .project-content {
-      grid-area: 1 / 6 / -1 / -1;
-      text-align: right;
-      h2 {
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+			h2 {
+				font-weight: 500;
+				display: flex;
+				align-items: center;
+				&::after {
+					@include drawline(margin-left);
+				}
+			}
+		}
+		.project-image {
+			position: relative;
+			z-index: 1;
+			grid-area: 1 / 6 / -1 / -1;
+			padding: 0 1rem;
+			background-color: #eee;
+			display: flex;
+			align-items: center;
+		}
+		.project-card {
+			border-radius: 10px;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+			position: relative;
+			z-index: 2;
+			margin: 1rem 0;
+			.blur {
+				display: block;
+			}
+			p {
+				margin: 2rem;
+				position: relative;
+				z-index: 10;
+			}
+		}
+		.tag-wrapper {
+			position: relative;
+			z-index: 2;
+		}
+		.button-wrapper {
+			display: flex;
+			align-items: center;
+			margin-top: 1rem;
+			a {
+				margin: 0.5rem;
+				@include link-color($dark-secondary-color);
+			}
+		}
+	}
+	.project.reverse {
+		.project-content {
+			grid-area: 1 / 6 / -1 / -1;
+			text-align: right;
+			h2 {
+				font-weight: 500;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
 
-        &::before {
-          @include drawline(margin-right);
-        }
-        &::after {
-          content: '';
-          display: none;
-        }
-      }
-    }
-    .project-image {
-      grid-area: 1 / 1 / -1 / 7;
-    }
-  }
+				&::before {
+					@include drawline(margin-right);
+				}
+				&::after {
+					content: '';
+					display: none;
+				}
+			}
+		}
+		.project-image {
+			grid-area: 1 / 1 / -1 / 7;
+		}
+	}
 }
 
 @media screen and (max-width: 1280px) {
-  #projects {
-    .project {
-      .project-image {
-        grid-area: 1 / 5 / -1 / -1;
-      }
-    }
-    .project.reverse {
-      .project-image {
-        grid-area: 1 / 1 / -1 / 8;
-      }
-    }
-  }
+	#projects {
+		.project {
+			.project-image {
+				grid-area: 1 / 5 / -1 / -1;
+			}
+		}
+		.project.reverse {
+			.project-image {
+				grid-area: 1 / 1 / -1 / 8;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1030px) {
-  #projects {
-    .project {
-      .project-image {
-        grid-area: 1 / 4 / -1 / -1;
-        padding: 0;
-        background-color: transparent;
-      }
-      .project-content {
-        h2 {
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
-    .project.reverse {
-      .project-image {
-        grid-area: 1 / 1 / -1 / 9;
-      }
-      .project-content {
-        h2 {
-          &::before {
-            display: none;
-          }
-        }
-      }
-    }
-  }
+	#projects {
+		.project {
+			.project-image {
+				grid-area: 1 / 4 / -1 / -1;
+				padding: 0;
+				background-color: transparent;
+			}
+			.project-content {
+				h2 {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+		.project.reverse {
+			.project-image {
+				grid-area: 1 / 1 / -1 / 9;
+			}
+			.project-content {
+				h2 {
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }
 @media screen and (max-width: 950px) {
-  #projects {
-    .project {
-      margin: 5rem 1rem;
-      .blur {
-        display: block;
-      }
-      .project-image {
-        grid-column: 1 / -1;
-        opacity: 0.75;
-      }
-      .project-content {
-        grid-column: 1 / -1;
-        padding: 0.5rem;
-        text-align: center;
-        z-index: 2;
-        background-color: rgba(255, 255, 255, 0.4);
+	#projects {
+		.project {
+			margin: 5rem 1rem;
+			.blur {
+				display: block;
+			}
+			.project-image {
+				grid-column: 1 / -1;
+				opacity: 0.75;
+			}
+			.project-content {
+				grid-column: 1 / -1;
+				padding: 0.5rem;
+				text-align: center;
+				z-index: 2;
+				background-color: rgba(255, 255, 255, 0.4);
 
-        h2 {
-          justify-content: center;
-        }
-      }
-    }
-    .project.reverse {
-      .project-image {
-        grid-column: 1 / -1;
-      }
-      .project-content {
-        grid-column: 1 / -1;
-        text-align: center;
-        h2 {
-          justify-content: center;
-        }
-      }
-    }
-  }
+				h2 {
+					justify-content: center;
+				}
+			}
+		}
+		.project.reverse {
+			.project-image {
+				grid-column: 1 / -1;
+			}
+			.project-content {
+				grid-column: 1 / -1;
+				text-align: center;
+				h2 {
+					justify-content: center;
+				}
+			}
+		}
+	}
 }

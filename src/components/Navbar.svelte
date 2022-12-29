@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { language } from '../store';
+	//@ ts-ignore
 	import FaCode from 'svelte-icons/fa/FaCode.svelte';
 	import FaBars from 'svelte-icons/fa/FaBars.svelte';
 	import FaTimes from 'svelte-icons/fa/FaTimes.svelte';
