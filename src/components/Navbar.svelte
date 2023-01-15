@@ -29,6 +29,7 @@
 	};
 
 	function scrollIntoView({ target }: { target: any }) {
+		console.log(target);
 		const el = document.querySelector(target.getAttribute('href'));
 		if (!el) return;
 		el.scrollIntoView({
