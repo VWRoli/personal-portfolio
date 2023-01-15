@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { language } from '../store';
+	import { hungarian } from '../lib/assets/languages/hungarian';
+	import { english } from '../lib/assets/languages/english';
 	//@ ts-ignore
 	import FaCode from 'svelte-icons/fa/FaCode.svelte';
 	import FaBars from 'svelte-icons/fa/FaBars.svelte';
@@ -15,6 +17,16 @@
 	function toggle() {
 		isOpen = !isOpen;
 	}
+
+	const switchEnglish = () => {
+		isActive = true;
+		language.update((lang) => (lang = english));
+	};
+
+	const switchHungarian = () => {
+		isActive = false;
+		language.update((lang) => (lang = hungarian));
+	};
 
 	function scrollIntoView({ target }: { target: any }) {
 		const el = document.querySelector(target.getAttribute('href'));
@@ -58,8 +70,8 @@
 			<Button route="cv_roland_füst.pdf" label={$language.resumeBtn} typeClass="resume" />
 		</div>
 		<div class="lang-selector">
-			<LangButton flag={hungaryFlag} {isActive} handleClick={() => {}} />
-			<LangButton flag={englishFlag} isActive={!isActive} handleClick={() => {}} />
+			<LangButton flag={hungaryFlag} {isActive} handleClick={switchEnglish} />
+			<LangButton flag={englishFlag} isActive={!isActive} handleClick={switchHungarian} />
 		</div>
 	</div>
 </nav>
