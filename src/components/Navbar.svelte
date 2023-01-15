@@ -28,23 +28,23 @@
 
 <nav>
 	<div class="nav-header">
-		<div class="icon">
-			<FaCode class="logo-icon" />
+		<div class="icon logo-icon">
+			<FaCode />
 		</div>
 		{$language.logo}
 		<button class="nav-toggle" aria-label="Toggle mobile menu" on:click={toggle}>
 			{#if isOpen}
 				<div>
-					<FaBars />
+					<FaTimes />
 				</div>
 			{:else}
 				<div>
-					<FaTimes />
+					<FaBars />
 				</div>
 			{/if}
 		</button>
 	</div>
-	<ul class={isOpen ? `links` : `links show-container`}>
+	<ul class={isOpen ? `links show-container` : `links`}>
 		{#each $language.links as link (link.id)}
 			<li>
 				<a class="link-items" href={link.url} on:click|preventDefault={scrollIntoView}>
